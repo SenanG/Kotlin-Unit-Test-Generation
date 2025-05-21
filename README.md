@@ -121,7 +121,3 @@ When the user selects a Kotlin function in their IntelliJ IDEA and triggers the 
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-## 📜 License
-
-(Specify your license, e.g., MIT, Apache 2.0)
