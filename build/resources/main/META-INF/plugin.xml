@@ -1,4 +1,14 @@
-# KotlinTestGenAI
+<idea-plugin>
+  <id>io.github.senang.Kotlin-Unit-Test-Generation</id>
+  <!-- CHANGE TO YOUR UNIQUE ID -->
+  <name>KotlinTestGenAI</name>
+  <version>0.1.0-SNAPSHOT</version>
+  <vendor email="senang@example.com" url="https://github.com/senang">senang</vendor>
+  <!-- CHANGE -->
+  <description><![CDATA[Generates JUnit5 unit tests for Kotlin functions using Anthropic Claude.
+    Select a Kotlin function, right-click, and choose "Generate Unit Tests with Claude".
+    The plugin communicates with a local FastAPI backend that queries the Claude API.
+    ]]><![CDATA[# KotlinTestGenAI
 
 KotlinTestGenAI is an IntelliJ (JetBrains) plugin built in Kotlin that enables developers to generate JUnit5 unit tests for Kotlin functions using Claude (Anthropic LLM).
 
@@ -124,4 +134,27 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 📜 License
 
-(Specify your license, e.g., MIT, Apache 2.0)
+(Specify your license, e.g., MIT, Apache 2.0)]]></description>
+  <change-notes><![CDATA[<b>v0.1.0</b>
+    <ul>
+        <li>Initial release. Basic functionality to generate tests for a selected Kotlin function.</li>
+    </ul>
+    ]]><![CDATA[Initial release of KotlinTestGenAI.]]></change-notes>
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="233" until-build="233.*" />
+  <!-- Set based on your intellij.version in build.gradle.kts (e.g. 2023.3 -> 233) -->
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.jetbrains.kotlin</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <notificationGroup id="io.github.senang.KotlinTestGenAI.Notifications" displayType="BALLOON" />
+  </extensions>
+  <actions>
+    <action id="io.github.senang.KotlinTestGenAI.GenerateTestAction" class="io.github.senang.kotlinunittestgeneration.actions.GenerateTestAction" text="Generate Unit Tests with Claude (KotlinTestGenAI)" description="Generates JUnit5 unit tests for the selected Kotlin function using Claude." icon="/icons/testgenai_icon.svg">
+      <add-to-group group-id="EditorPopupMenu" anchor="last" />
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last" />
+    </action>
+  </actions>
+</idea-plugin>

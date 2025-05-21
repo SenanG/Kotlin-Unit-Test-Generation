@@ -1,0 +1,4 @@
+/Users/senan/projects/Kotlin-Unit-Test-Generation/src/main/kotlin/io/github/senang/kotlinunittestgeneration/actions/GenerateTestAction.kt
+/Users/senan/projects/Kotlin-Unit-Test-Generation/src/main/kotlin/io/github/senang/kotlinunittestgeneration/TestGenAIPlugin.kt
+/Users/senan/projects/Kotlin-Unit-Test-Generation/src/main/kotlin/io/github/senang/kotlinunittestgeneration/utils/PsiUtils.kt
+/Users/senan/projects/Kotlin-Unit-Test-Generation/src/main/kotlin/io/github/senang/kotlinunittestgeneration/services/ClaudeService.kt
